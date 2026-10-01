@@ -1,0 +1,140 @@
+/* ===== Variables de marca (colores tomados del logo) ===== */
+:root {
+  --morado: #3d1240;
+  --morado-claro: #6b2a6e;
+  --dorado: #e8a93c;
+  --dorado-claro: #f4c565;
+  --texto: #f5f0e6;
+  --texto-suave: #d8cdd9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--morado);
+  /* Logo como marca de agua muy sutil, fija en el fondo */
+  background-image:
+    linear-gradient(rgba(61, 18, 64, 0.94), rgba(61, 18, 64, 0.94)),
+    url('../img/logo-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: 700px;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  text-align: center;
+}
+
+/* ===== Logo y encabezado ===== */
+.logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px rgba(232, 169, 60, 0.5);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 4px;
+  color: var(--dorado-claro);
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  margin: 0 0 36px;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+/* ===== Botones principales ===== */
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boton:active {
+  transform: scale(0.98);
+}
+
+.boton svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.boton-catalogo {
+  background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+  color: var(--morado);
+  box-shadow: 0 4px 14px rgba(232, 169, 60, 0.35);
+}
+
+.boton-whatsapp {
+  background-color: #25d366;
+  color: #0b3d20;
+}
+
+.boton-facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+/* ===== Pie de página ===== */
+footer {
+  margin-top: 40px;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+/* ===== Página del catálogo (catalogo.html) ===== */
+.volver {
+  display: inline-block;
+  margin: 18px auto 0;
+  color: var(--dorado-claro);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.paginas-catalogo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+.paginas-catalogo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 4px;
+}
+
+.barra-superior {
+  text-align: center;
+  padding: 20px 16px;
+}
