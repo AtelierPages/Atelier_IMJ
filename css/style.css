@@ -37,10 +37,11 @@ main {
 
 /* ===== Logo y encabezado ===== */
 .logo {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
-
 /* ===== Nieve sobre el logo (el logo no se modifica) ===== */
 .logo-navidad {
   position: relative;
