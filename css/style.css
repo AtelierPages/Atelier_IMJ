@@ -40,13 +40,13 @@ main {
   width: 280px;
   height: 280px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 /* ===== Nieve sobre el logo (el logo no se modifica) ===== */
 .logo-navidad {
   position: relative;
-  width: 350px;
-  height: 400px;
+  width: 300px;
+  height: 250px;
   margin: 38px auto 30px;
 }
 
