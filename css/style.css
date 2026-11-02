@@ -37,8 +37,8 @@ main {
 
 /* ===== Logo y encabezado ===== */
 .logo {
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   margin-bottom: 20px;
 }
@@ -47,7 +47,7 @@ main {
   position: relative;
   width: 400px;
   height: 400px;
-  margin: 28px auto 20px;
+  margin: 35px auto 30px;
 }
 
 /* Capa de nieve: cubre el logo y un poco de su alrededor */
