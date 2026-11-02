@@ -4,26 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IMJ Atelier de Colores</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <main>
-    <!-- El logo no se modifica: el gorro y la nieve son capas encima -->
+    <!-- El logo no se modifica: la nieve es una capa encima -->
     <div class="logo-navidad">
-      <img src="img/logo.png" alt="Logo IMJ Atelier de Colores" class="logo">
+      <img src="img/logo1.png" alt="Logo IMJ Atelier de Colores" class="logo">
 
-      <svg class="gorro-navideno" width="112" height="84" viewBox="0 0 120 90" aria-hidden="true">
-        <!-- cuerpo del gorro -->
-        <path d="M8 74 C 14 38, 44 10, 88 14 C 96 16, 100 22, 96 30 C 92 38, 98 56, 112 74 Z" fill="#d62828"/>
-        <!-- sombra suave -->
-        <path d="M60 22 C 82 24, 90 44, 106 74 L 112 74 C 98 56, 92 38, 96 30 C 100 22, 96 16, 88 14 Z" fill="#a81d1d" opacity="0.55"/>
-        <!-- borde de pelo blanco -->
-        <rect x="2" y="66" width="116" height="20" rx="10" fill="#ffffff"/>
-        <rect x="2" y="66" width="116" height="20" rx="10" fill="none" stroke="#e6e1ea" stroke-width="1.5"/>
-        <!-- pompón -->
-        <circle cx="94" cy="14" r="11" fill="#ffffff"/>
-        <circle cx="94" cy="14" r="11" fill="none" stroke="#e6e1ea" stroke-width="1.5"/>
-      </svg>
 
       <div class="nieve" id="nieve" aria-hidden="true"></div>
     </div>
@@ -58,9 +46,9 @@
     (function () {
       var cont = document.getElementById('nieve');
       if (!cont) return;
-      for (var i = 0; i < 36; i++) {
+      for (var i = 0; i < 60; i++) {
         var c = document.createElement('span');
-        var t = 2 + Math.random() * 3;           // tamaño en px
+        var t = 3 + Math.random() * 4;           // tamaño en px
         c.className = 'copo';
         c.style.width = c.style.height = t + 'px';
         c.style.left = (Math.random() * 100) + '%';
