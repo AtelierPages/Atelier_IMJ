@@ -8,7 +8,26 @@
 </head>
 <body>
   <main>
-    <img src="img/logo.jpg" alt="Logo IMJ Atelier de Colores" class="logo">
+    <!-- El logo no se modifica: el gorro y la nieve son capas encima -->
+    <div class="logo-navidad">
+      <img src="img/logo.jpg" alt="Logo IMJ Atelier de Colores" class="logo">
+
+      <svg class="gorro-navideno" viewBox="0 0 120 90" aria-hidden="true">
+        <!-- cuerpo del gorro -->
+        <path d="M8 74 C 14 38, 44 10, 88 14 C 96 16, 100 22, 96 30 C 92 38, 98 56, 112 74 Z" fill="#d62828"/>
+        <!-- sombra suave -->
+        <path d="M60 22 C 82 24, 90 44, 106 74 L 112 74 C 98 56, 92 38, 96 30 C 100 22, 96 16, 88 14 Z" fill="#a81d1d" opacity="0.55"/>
+        <!-- borde de pelo blanco -->
+        <rect x="2" y="66" width="116" height="20" rx="10" fill="#ffffff"/>
+        <rect x="2" y="66" width="116" height="20" rx="10" fill="none" stroke="#e6e1ea" stroke-width="1.5"/>
+        <!-- pompón -->
+        <circle cx="94" cy="14" r="11" fill="#ffffff"/>
+        <circle cx="94" cy="14" r="11" fill="none" stroke="#e6e1ea" stroke-width="1.5"/>
+      </svg>
+
+      <div class="nieve" id="nieve" aria-hidden="true"></div>
+    </div>
+
     <h1>IMJ Atelier de Colores</h1>
     <p class="subtitulo">Personaliza tu estilo &bull; Sublimación, DTF y más</p>
 
@@ -30,8 +49,27 @@
     </div>
 
     <footer>
-      Sonsonate Centro &bull; 7575-6744 / 7628-6863
+      Sonsonate Centro &bull; 7943-2834
     </footer>
   </main>
+
+  <script>
+    // Nieve cayendo sobre el logo
+    (function () {
+      var cont = document.getElementById('nieve');
+      if (!cont) return;
+      for (var i = 0; i < 36; i++) {
+        var c = document.createElement('span');
+        var t = 2 + Math.random() * 3;           // tamaño en px
+        c.className = 'copo';
+        c.style.width = c.style.height = t + 'px';
+        c.style.left = (Math.random() * 100) + '%';
+        c.style.opacity = 0.5 + Math.random() * 0.5;
+        c.style.animationDuration = (4 + Math.random() * 5) + 's';
+        c.style.animationDelay = (-Math.random() * 9) + 's';
+        cont.appendChild(c);
+      }
+    })();
+  </script>
 </body>
 </html>
