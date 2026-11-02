@@ -45,9 +45,9 @@ main {
 /* ===== Nieve sobre el logo (el logo no se modifica) ===== */
 .logo-navidad {
   position: relative;
-  width: 400px;
+  width: 350px;
   height: 400px;
-  margin: 35px auto 30px;
+  margin: 38px auto 30px;
 }
 
 /* Capa de nieve: cubre el logo y un poco de su alrededor */
