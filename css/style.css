@@ -37,47 +37,54 @@ main {
 
 /* ===== Logo y encabezado ===== */
 .logo {
-  width: 280px;
+  width: 300px;
   height: 280px;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 15px;
+  position: relative;
+  top: -20px;
 }
 /* ===== Nieve sobre el logo (el logo no se modifica) ===== */
 .logo-navidad {
-  position: relative;
+  position: center;
   width: 300px;
-  height: 250px;
-  margin: 38px auto 30px;
+  height: 280px;
+  margin: 18px auto 20px;
 }
 
 /* Capa de nieve: cubre el logo y un poco de su alrededor */
 .nieve {
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  right: -30px;
-  bottom: -10px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   pointer-events: none;
-  z-index: 3;
+  z-index: 9999;
 }
 
 .copo {
   position: absolute;
-  top: -10px;
+  top: -20px;
   background: #ffffff;
   border-radius: 50%;
-  opacity: 0.9;
-  box-shadow: 0 0 3px rgba(61, 18, 64, 0.55);
+  opacity: 0.95;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   animation-name: caer;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes caer {
-  0%   { transform: translate(0, -10px); }
-  50%  { transform: translate(10px, 115px); }
-  100% { transform: translate(-6px, 230px); }
+  0% {
+    transform: translate(0, -20px);
+  }
+  50% {
+    transform: translate(35px, 50vh);
+  }
+  100% {
+    transform: translate(-20px, 100vh);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
